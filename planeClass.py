@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 class Plane:
     import configparser
     main_config = configparser.ConfigParser()
