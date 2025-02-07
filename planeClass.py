@@ -554,7 +554,7 @@ class Plane:
         if self.feeding:
             #Squawks
             emergency_squawks ={"7500" : "Hijacking", "7600" :"Radio Failure", "7700" : "General Emergency"}
-            seen = datetime.now() - self.last_pos_datetime
+            seen = datetime.now(timezone.utc) - self.last_pos_datetime
             #Only run check if emergency data previously set
             if self.last_emergency is not None and not self.emergency_already_triggered:
                 time_since_org_emer = datetime.now() - self.last_emergency[0]
